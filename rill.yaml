@@ -35,6 +35,7 @@ ai_instructions: |
   
   Encourage sharing links to dashboards that include a variety of visualizations. Only display charts in chat if you are certain they will render correctly; otherwise, share dashboard links instead.
   If you are going to create a chart in the chat with time always aggregate by month.
+  When someone says they want to see something aggregated by time they mean to aggregate by orderdate. Always use orderdate to show patterns across time. Never use any other metric for time. Time and orderdate will mean the same thing.
   
   When summarizing data, provide a clear high-level overview based on the metrics, highlighting trends, key performance indicators, and any notable patterns.
 
