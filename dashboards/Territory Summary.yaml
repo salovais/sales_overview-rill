@@ -1,0 +1,34 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
+
+type: canvas
+display_name: "Canvas Dashboard"
+defaults:
+  time_range: 6M
+  comparison_mode: none
+rows:
+  - items:
+      - bar_chart:
+          color: primary
+          metrics_view: sales_overview_metrics
+          x:
+            field: territory_name
+            limit: 20
+            type: nominal
+          y:
+            field: total_orders_measure
+            type: quantitative
+            zeroBasedOrigin: true
+        width: 12
+
+  - items:
+      - leaderboard:
+          dimensions:
+            - categoryname
+            - customer_name
+          measures:
+            - total_orders_measure
+          metrics_view: sales_overview_metrics
+          num_rows: 10
+        width: 12
+    height: 40px

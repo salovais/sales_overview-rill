@@ -1,0 +1,75 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
+
+type: canvas
+display_name: "Executive Summary"
+defaults:
+  time_range: 6M
+  comparison_mode: none
+rows:
+  - items:
+      - kpi_grid:
+          comparison:
+            - percent_change
+            - delta
+            - previous
+          hide_time_range: true
+          measures:
+            - total_revenue
+            - total_orders_measure
+            - total_profit
+            - profit_margin
+            - "# Total Customers"
+          metrics_view: sales_overview_metrics
+          sparkline: none
+          title: KPI Summary
+          description: Company wide KPI alignments
+        width: 12
+    height: 40px
+  - items:
+      - combo_chart:
+          color:
+            field: rill_measures
+            legendOrientation: top
+            type: value
+          metrics_view: sales_overview_metrics
+          x:
+            field: shipping_country
+            limit: 20
+            type: nominal
+            sort: -y
+          y1:
+            field: total_shipping_cost_measure
+            mark: bar
+            type: quantitative
+            zeroBasedOrigin: true
+          y2:
+            field: avg_of_total_cost
+            mark: line
+            type: quantitative
+            zeroBasedOrigin: true
+        width: 9
+      - donut_chart:
+          color:
+            field: customer_type
+            limit: 20
+            type: nominal
+          innerRadius: 70
+          measure:
+            field: total_orders_measure
+            showTotal: true
+            type: quantitative
+          metrics_view: sales_overview_metrics
+        width: 3
+    height: 40px
+  - items:
+      - leaderboard:
+          dimensions:
+            - categoryname
+            - customer_name
+          measures:
+            - total_orders_measure
+          metrics_view: sales_overview_metrics
+          num_rows: 10
+        width: 12
+    height: 40px

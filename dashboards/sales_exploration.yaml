@@ -1,0 +1,11 @@
+# Explore YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/explore-dashboards
+
+type: explore
+
+display_name: "Sales Exploration"
+metrics_view: sales_overview_metrics
+
+dimensions: '*'
+measures: '*'
+theme: theme
