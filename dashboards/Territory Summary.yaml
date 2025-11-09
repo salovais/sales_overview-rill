@@ -4,7 +4,7 @@
 type: canvas
 display_name: "Canvas Dashboard"
 defaults:
-  time_range: 6M
+  time_range: 6M as of latest/M+1M
   comparison_mode: none
 rows:
   - items:
