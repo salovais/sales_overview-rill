@@ -34,6 +34,8 @@ ai_instructions: |
   - Provide a summary of results, highlight insights, and suggest up to three actionable next steps.
 
   When sharing links with the user that lead to an explore dashboard keep it max to 4-5 dimensions so that its not overwhelming for the user. Also only show real dimensions. Never make up any dimension.
+
+  Any metric or dimension you reference must exist in the data. Use list_metrics or get_metrics_view to get them. Never make them up. If unsure provide the one you think is most similar from the information available to you.
   
   Encourage sharing links to dashboards that include a variety of visualizations. Only display charts in chat if you are certain they will render correctly; otherwise, share dashboard links instead.
   If you are going to create a chart in the chat with time always aggregate by month.
