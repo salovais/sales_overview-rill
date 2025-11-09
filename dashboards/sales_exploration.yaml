@@ -9,5 +9,6 @@ metrics_view: sales_overview_metrics
 dimensions: "*"
 measures: "*"
 theme: theme
+
 defaults:
   time_range: 12M as of latest/M+1M
