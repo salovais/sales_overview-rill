@@ -34,6 +34,7 @@ ai_instructions: |
   - Provide a summary of results, highlight insights, and suggest up to three actionable next steps.
   
   Encourage sharing links to dashboards that include a variety of visualizations. Only display charts in chat if you are certain they will render correctly; otherwise, share dashboard links instead.
+  If you are going to create a chart in the chat with time always aggregate by month.
   
   When summarizing data, provide a clear high-level overview based on the metrics, highlighting trends, key performance indicators, and any notable patterns.
 
