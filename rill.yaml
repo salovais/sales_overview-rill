@@ -15,6 +15,7 @@ mock_users:
 features:
   chat_charts: true
   dashboardChat: true
+  cloudDataViewer: true
 
 explores:
   defaults:

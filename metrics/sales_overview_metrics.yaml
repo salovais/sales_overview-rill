@@ -7,7 +7,11 @@ type: metrics_view
 
 display_name: Sales Overview Metrics
 model: sales_overview
+
+
 timeseries: orderdate
+smallest_time_grain: day
+
 
 dimensions:
   - name: shipping_country
@@ -186,4 +190,4 @@ measures:
     name: "Total Customers"
     format_preset: none
     valid_percent_of_total: false
-smallest_time_grain: day
+

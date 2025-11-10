@@ -6,41 +6,43 @@ type: explore
 display_name: "Sales Exploration"
 metrics_view: sales_overview_metrics
 
-dimensions:
-  - shipping_country
-  - shipping_region
-  - shipping_city
-  - shipping_postalcode
-  - productname
-  - categoryname
-  - category_description
-  - customerid
-  - customer_name
-  - customer_type
-  - RFM_segments
-  - predicted_churn_category
-  - employee_name
-  - territory_name
-  - territory_region
-  - shipper_name
-  - supplier_name
-measures:
-  - total_orders_measure
-  - total_quantity_sold_measure
-  - total_revenue
-  - average_order_revenue_measure
-  - sum_of_total_discount
-  - avg_of_total_discount
-  - sum_of_total_cost
-  - avg_of_total_cost
-  - total_shipping_cost_measure
-  - avg_of_shipping_cost
-  - average_order_processing_time_measure
-  - total_profit
-  - average_order_profit_measure
-  - profit_margin
-  - Total Customers
+dimensions: "*"
+measures: "*"
 theme: theme
 
 defaults:
-  time_range: 12M as of latest/M+1M
+  measures:
+    - total_orders_measure
+    - total_quantity_sold_measure
+    - total_revenue
+    - average_order_revenue_measure
+    - sum_of_total_discount
+    - avg_of_total_discount
+    - sum_of_total_cost
+    - avg_of_total_cost
+    - total_shipping_cost_measure
+    - avg_of_shipping_cost
+    - average_order_processing_time_measure
+    - total_profit
+    - average_order_profit_measure
+    - profit_margin
+    - Total Customers
+  dimensions:
+    - shipping_country
+    - shipping_region
+    - shipping_city
+    - shipping_postalcode
+    - productname
+    - categoryname
+    - category_description
+    - customerid
+    - customer_name
+    - customer_type
+    - RFM_segments
+    - predicted_churn_category
+    - employee_name
+    - territory_name
+    - territory_region
+    - shipper_name
+    - supplier_name
+  time_range: 12M
