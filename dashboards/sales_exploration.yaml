@@ -9,7 +9,6 @@ metrics_view: sales_overview_metrics
 dimensions: "*"
 measures: "*"
 theme: theme
-
 defaults:
   measures:
     - total_orders_measure
