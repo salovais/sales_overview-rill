@@ -8,19 +8,59 @@ defaults:
   comparison_mode: none
 rows:
   - items:
-      - bar_chart:
-          color: primary
+      - markdown:
+          alignment:
+            horizontal: left
+            vertical: middle
+          content: |+
+            # Territory Performance
+            Summary of company-wide sales territory performance.
+
+        width: 12
+    height: 40px
+  - items:
+      - combo_chart:
+          color:
+            colorMapping:
+              - color: hsl(236, 56%, 52%)
+                value: Total Revenue
+              - value: Total Customers
+                color: hsl(101, 100%, 30%)
+            field: measures
+            legendOrientation: top
+            type: value
           metrics_view: sales_overview_metrics
           x:
             field: territory_name
             limit: 20
             type: nominal
-          y:
-            field: total_orders_measure
+          y1:
+            field: total_revenue
+            mark: bar
+            type: quantitative
+            zeroBasedOrigin: true
+          y2:
+            field: Total Customers
+            mark: line
             type: quantitative
             zeroBasedOrigin: true
         width: 12
-
+    height: 40px
+  - items:
+      - pivot:
+          measures:
+            - total_orders_measure
+            - total_quantity_sold_measure
+            - total_revenue
+            - Total Customers
+          metrics_view: sales_overview_metrics
+          row_dimensions:
+            - territory_region
+            - territory_name
+            - employee_name
+          title: Summary Pivot
+          description: Drill down for territory and sales rep detail
+        width: 12
   - items:
       - leaderboard:
           dimensions:
@@ -30,5 +70,7 @@ rows:
             - total_orders_measure
           metrics_view: sales_overview_metrics
           num_rows: 10
+          title: My Top 10
+          description: Explore top 10 across multiple categories
         width: 12
     height: 40px

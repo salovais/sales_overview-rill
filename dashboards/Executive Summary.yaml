@@ -13,17 +13,17 @@ rows:
             - percent_change
             - delta
             - previous
+          description: Company wide KPI alignments
           hide_time_range: true
           measures:
             - total_revenue
             - total_orders_measure
             - total_profit
             - profit_margin
-            - "# Total Customers"
+            - Total Customers
           metrics_view: sales_overview_metrics
           sparkline: none
           title: KPI Summary
-          description: Company wide KPI alignments
         width: 12
     height: 40px
   - items:
@@ -32,12 +32,16 @@ rows:
             field: rill_measures
             legendOrientation: top
             type: value
+            colorMapping:
+              - value: Total Shipping Cost
+                color: hsl(239, 56%, 52%)
           metrics_view: sales_overview_metrics
+          title: Shipping Cost Summary
           x:
             field: shipping_country
             limit: 20
-            type: nominal
             sort: -y
+            type: nominal
           y1:
             field: total_shipping_cost_measure
             mark: bar
@@ -48,12 +52,18 @@ rows:
             mark: line
             type: quantitative
             zeroBasedOrigin: true
+          description: Total shipping cost & average total cost
         width: 9
       - donut_chart:
           color:
             field: customer_type
             limit: 20
             type: nominal
+            colorMapping:
+              - value: Wholesale
+                color: hsl(227, 56%, 52%)
+              - value: Retail
+                color: hsl(281, 100%, 65%)
           innerRadius: 70
           measure:
             field: total_orders_measure
