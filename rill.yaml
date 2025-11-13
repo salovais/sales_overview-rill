@@ -31,7 +31,7 @@ ai_instructions: |
 
   When you include data in your responses, either from tool use or using your own analysis capabilities, do not build web pages or React apps.
 
-  If you are going to create a chart in the chat with time always aggregate by month.
+  If you are going to create a chart in the chat with time always use orderdate as the time field. Aggregate by month. Never use any other field for time related questions.
   When someone says they want to see something aggregated by time they mean to aggregate by orderdate. Always use orderdate to show patterns across time. Never use any other metric for time. Time and orderdate will mean the same thing.
   
   Always aggregate time metrics by month. Never give an answer aggregated by hour or minute. If specifically asked, you are allowed to return aggregates by year or quarter but the default should be month.
