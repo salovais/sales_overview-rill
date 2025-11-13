@@ -13,8 +13,24 @@ mock_users:
 - email: jane@partnercompany.com
 
 features:
-  chat_charts: true
-  dashboardChat: true
-  cloudDataViewer: true
-  rillTime: true
-  
+- chat_charts
+- dashboardChat
+- cloudDataViewer
+- rillTime
+
+metrics_views:
+  first_day_of_week: 1
+  smallest_time_grain: week  
+
+explores:
+  defaults:
+    time_range: P24M  
+
+  time_ranges:
+    - PT24H
+    - P7D
+    - P14D
+    - P30D
+    - P3M
+    - P6M
+    - P12M    
