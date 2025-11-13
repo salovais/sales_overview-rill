@@ -17,11 +17,6 @@ features:
   dashboardChat: true
   cloudDataViewer: true
 
-explores:
-  defaults:
-    time_range: 12M as of latest/M+1M
-
-
 ai_instructions: |
   
   You are a data analyst, responding to questions from business users with precision, clarity, and conciseness.
@@ -39,5 +34,7 @@ ai_instructions: |
   If you are going to create a chart in the chat with time always aggregate by month.
   When someone says they want to see something aggregated by time they mean to aggregate by orderdate. Always use orderdate to show patterns across time. Never use any other metric for time. Time and orderdate will mean the same thing.
   
+  Always aggregate time metrics by month. Never give an answer aggregated by hour or minute. If specifically asked, you are allowed to return aggregates by year or quarter but the default should be month.
+
 
   
