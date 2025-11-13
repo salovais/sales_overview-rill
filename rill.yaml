@@ -16,4 +16,5 @@ features:
   chat_charts: true
   dashboardChat: true
   cloudDataViewer: true
+  rillTime: true
   
