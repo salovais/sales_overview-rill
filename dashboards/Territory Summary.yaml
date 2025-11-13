@@ -2,7 +2,7 @@
 # Reference documentation: https://docs.rilldata.com/reference/project-files/canvas-dashboards
 
 type: canvas
-display_name: "Territory Summary"
+display_name: "Territory Performance"
 defaults:
   time_range: 6M as of latest/M+1M
   comparison_mode: none
